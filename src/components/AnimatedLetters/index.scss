@@ -11,7 +11,7 @@
     animation-fill-mode: both;
 
     &:hover{
-        animation: rubberBand 1s forwards;
+        animation: tada 0.5s forwards;
         color: rgb(255, 245, 0);
     }
 }

@@ -1,20 +1,23 @@
 .nav-bar {
   background-color: #181818;
-  width: 85px;
+  width: 40px;
   height: 100%;
   position: absolute;
   top: 0;
   z-index: 3;
   min-height: 500px;
+  transition: all 0.3s ease-out;
 
   .logo {
     display: block;
     padding: 8px 0;
     text-decoration: none;
+    overflow: hidden;
+    width:30px;
+    margin: 8px auto;
     & > * {
       text-align: center;
       display: block;
-      margin: 8px auto;
     }
     h1 {
       color: #022c43;
@@ -22,6 +25,17 @@
     }
     h6 {
       color: rgb(255, 245, 0);
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
+  }
+  &:hover {
+    width: 85px;
+    & .logo{
+      width:auto;
+    }
+    & h6 {
+      opacity: 1;
     }
   }
   nav {
@@ -41,7 +55,8 @@
       height: 60px;
       position: relative;
       text-decoration: none;
-      i,svg {
+      i,
+      svg {
         transition: all 0.3s ease-out;
       }
       &:hover {
@@ -55,60 +70,60 @@
           transform: scale(1) rotate(0deg);
         }
       }
-      &:after{
-          content: '';
-          opacity: 0;
-          font-size: 1rem;
-          letter-spacing: 3px;
-          position: absolute;
-          bottom: 0;
-          display: block;
-          width: 100%;
-          text-align: center;
-          transition: all 0.3s ease-out;
-          transform: scale(0) rotate(-180deg);
+      &:after {
+        content: "";
+        opacity: 0;
+        font-size: 1rem;
+        letter-spacing: 3px;
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        transform: scale(0) rotate(-180deg);
       }
-      &:first-child{
-          &::after{
-              content: 'HOME'
-          }
-      }
-      &.about-link{
-        &::after{
-            content: 'ABOUT'
+      &:first-child {
+        &::after {
+          content: "HOME";
         }
       }
-      &.contact-link{
-        &::after{
-            content: 'CONTACT'
+      &.about-link {
+        &::after {
+          content: "ABOUT";
         }
       }
-      &.active{
-          svg{
-              color:rgb(255, 245, 0)
-          }
+      &.contact-link {
+        &::after {
+          content: "CONTACT";
+        }
+      }
+      &.active {
+        svg {
+          color: rgb(255, 245, 0);
+        }
       }
     }
   }
-  ul{
+  ul {
     position: absolute;
     bottom: 20px;
     width: 100%;
     display: block;
-    padding:0;
+    padding: 0;
     list-style: none;
     text-align: center;
-    margin:0;
-    &>li>a{
-      padding:7px 0;
+    margin: 0;
+    & > li > a {
+      padding: 7px 0;
       display: block;
-      font-size:20px;
+      font-size: 20px;
       line-height: 16px;
-      &>svg{
+      & > svg {
         transition: all 0.3s ease-out;
       }
-      &:hover svg{
-        color:rgb(255, 245, 0) !important;
+      &:hover svg {
+        color: rgb(255, 245, 0) !important;
         transform: scale(1.1) rotate(10deg);
       }
     }

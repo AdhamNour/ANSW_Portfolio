@@ -11,7 +11,11 @@ const Home: FunctionComponent<HomeProps> = (props) => {
   const jobArray: string[] = [..."Full Stack Developer"];
   const helloArray: string[] = [..."Hello"];
 
-  useEffect(() => setLetterClass("text-animate-hover"), []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLetterClass("text-animate-hover");
+    }, 4000);
+  }, []);
 
   return (
     <div className="container home-page">
