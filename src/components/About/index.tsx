@@ -1,4 +1,5 @@
 import { FunctionComponent, useEffect, useState } from "react";
+import { FaAndroid, FaCss3, FaGitAlt, FaHtml5, FaJsSquare, FaNodeJs, FaReact } from "react-icons/fa";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 
@@ -36,6 +37,28 @@ const About: FunctionComponent<AboutProps> = () => {
           person, father of a beautiful daughter, a sports fanatic, photography
           enthusiast, and tech-obsessed!!!
         </p>
+      </div>
+      <div className="stage-cube-cont">
+        <div className="cubespinner">
+          <div className="face1">
+            <FaGitAlt color="" />
+          </div>
+          <div className="face2">
+            <FaHtml5 color="#F06529" />
+          </div>
+          <div className="face3">
+            <FaNodeJs color="#68A063" />
+          </div>
+          <div className="face4">
+            <FaReact color="#5ED4F4" />
+          </div>
+          <div className="face5">
+            <FaJsSquare color="#EFD81D" />
+          </div>
+          <div className="face6">
+            <FaAndroid color="3DDC84" />
+          </div>
+        </div>
       </div>
     </div>
   );
